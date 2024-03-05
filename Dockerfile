@@ -22,6 +22,7 @@ RUN apt update && apt install -y --no-install-recommends --allow-unauthenticated
         libgtk2.0-dev libwx-perl libxmu-dev libgl1-mesa-glx libgl1-mesa-dri  \
         xdg-utils locales locales-all pcmanfm jq curl git firefox-esr \
        '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev \
+       sudo \
     && apt autoclean -y \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
@@ -36,8 +37,8 @@ RUN wget https://download.chitubox.com/17839/v2.0.0/CHITUBOX_V2.0.0.tar.gz?auth_
   && mkdir -p /chituboxtemp/ \
   && mkdir -p /chitubox/ \
   && tar -xf CHITUBOX_V2.0.0.tar.gz -C /chituboxtemp/ \
-  && rm -f CHITUBOX_V2.0.0.tar.gz \
-  && sudo ./CHITUBOX_Basic_Linux_Installer_V2.0.run --target /chitubox --mode unattended \
+  && rm -f /chituboxtemp/CHITUBOX_V2.0.0.tar.gz \
+  && ./chituboxtemp/CHITUBOX_Basic_Linux_Installer_V2.0.run --target /chitubox --mode unattended \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get autoclean \
   && groupadd chitubox \
