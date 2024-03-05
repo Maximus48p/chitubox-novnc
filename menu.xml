@@ -3,7 +3,7 @@
     <menu id="root-menu" label="Openbox 3">
         <item label="CHITUBOX">
             <action name="Execute">
-                <execute>/chitubox/AppRun</execute>
+                <execute>/chitubox/CHITUBOX_Basic_Linux_Installer_V2.0.run</execute>
             </action>
         </item>
         <item label="Terminal">
