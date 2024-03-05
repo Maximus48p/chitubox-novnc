@@ -38,7 +38,7 @@ RUN wget https://download.chitubox.com/17839/v2.0.0/CHITUBOX_V2.0.0.tar.gz?auth_
   && mkdir -p /chitubox/ \
   && tar -xf CHITUBOX_V2.0.0.tar.gz -C /chituboxtemp/ \
   && rm -f /chituboxtemp/CHITUBOX_V2.0.0.tar.gz \
-  && ./chituboxtemp/CHITUBOX_Basic_Linux_Installer_V2.0.run --target /chitubox --mode unattended \
+  && sudo ./chituboxtemp/CHITUBOX_Basic_Linux_Installer_V2.0.run --target /chitubox --mode unattended \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get autoclean \
   && groupadd chitubox \
