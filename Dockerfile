@@ -31,11 +31,11 @@ WORKDIR /chitubox
 
 # Note: On the next to lines, you will need to use Chrome or Firefox to start the download in your browser, then cancel it and copy the download URL to the line below.
 # For the line below that, copy the file name with the auth_key bits like shown here.
-RUN wget https://download.chitubox.com/17839/v1.9.5/CHITUBOX_V1.9.5.tar.gz?auth_key=1707873421-bxnqunqfbuike4u5ycmwu4oxrnyp4jqb-0-5fbe2fc8d2afcd12b07aaa126bdc132a \
-  && mv CHITUBOX_V1.9.5.tar.gz?auth_key=1707873421-bxnqunqfbuike4u5ycmwu4oxrnyp4jqb-0-5fbe2fc8d2afcd12b07aaa126bdc132a CHITUBOX_V1.9.5.tar.gz \
+RUN wget https://download.chitubox.com/17839/v2.0.0/CHITUBOX_V2.0.0.tar.gz?auth_key=1709632905-qxrmtjmjor42jsim2q9jusk2wjwp7frq-0-8e0bb4f87c6a8a1a7d19ecd4e7a6e01e \
+  && mv CHITUBOX_V2.0.0.tar.gz?auth_key=1709632905-qxrmtjmjor42jsim2q9jusk2wjwp7frq-0-8e0bb4f87c6a8a1a7d19ecd4e7a6e01e CHITUBOX_V2.0.0.tar.gz \
   && mkdir -p /chitubox/ \
-  && tar -xf CHITUBOX_V1.9.5.tar.gz -C /chitubox/ \
-  && rm -f CHITUBOX_V1.9.5.tar.gz \
+  && tar -xf CHITUBOX_V2.0.0.tar.gz -C /chitubox/ \
+  && rm -f CHITUBOX_V2.0.0.tar.gz \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get autoclean \
   && groupadd chitubox \
