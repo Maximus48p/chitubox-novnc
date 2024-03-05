@@ -33,7 +33,6 @@ WORKDIR /chitubox
 # Note: On the next to lines, you will need to use Chrome or Firefox to start the download in your browser, then cancel it and copy the download URL to the line below.
 # For the line below that, copy the file name with the auth_key bits like shown here.
 RUN wget https://home.parlevliet.com/files/api/public/dl/gt59Zq9m/test/CHITUBOX_V2.0.0.tar.gz \
-  && mv https://home.parlevliet.com/files/api/public/dl/gt59Zq9m/test/CHITUBOX_V2.0.0.tar.gz CHITUBOX_V2.0.0.tar.gz \
   && mkdir -p /chituboxtemp/ \
   && mkdir -p /chitubox/ \
   && tar -xf CHITUBOX_V2.0.0.tar.gz -C /chituboxtemp/ \
