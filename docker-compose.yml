@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   chitubox-novnc:
-    image: mikeah/chitubox-novnc
+    image: ghcr.io/maximus48p/chitubox-novnc:v0.0.1
     container_name: chitubox-novnc
     environment:
       - SSL_CERT_FILE="/etc/ssl/certs/ca-certificates.crt"

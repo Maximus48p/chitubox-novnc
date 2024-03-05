@@ -1,6 +1,6 @@
 #!/bin/bash
   
-image="mikeah/chitubox-novnc"  
+image="ghcr.io/maximus48p/chitubox-novnc:v0.0.1"  
   
 # Set the timestamp
 timestamp=$(date +%Y.%m.%d.%H%M%S)  

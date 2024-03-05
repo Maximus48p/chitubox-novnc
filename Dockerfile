@@ -33,9 +33,11 @@ WORKDIR /chitubox
 # For the line below that, copy the file name with the auth_key bits like shown here.
 RUN wget https://download.chitubox.com/17839/v2.0.0/CHITUBOX_V2.0.0.tar.gz?auth_key=1709632905-qxrmtjmjor42jsim2q9jusk2wjwp7frq-0-8e0bb4f87c6a8a1a7d19ecd4e7a6e01e \
   && mv CHITUBOX_V2.0.0.tar.gz?auth_key=1709632905-qxrmtjmjor42jsim2q9jusk2wjwp7frq-0-8e0bb4f87c6a8a1a7d19ecd4e7a6e01e CHITUBOX_V2.0.0.tar.gz \
+  && mkdir -p /chituboxtemp/ \
   && mkdir -p /chitubox/ \
-  && tar -xf CHITUBOX_V2.0.0.tar.gz -C /chitubox/ \
+  && tar -xf CHITUBOX_V2.0.0.tar.gz -C /chituboxtemp/ \
   && rm -f CHITUBOX_V2.0.0.tar.gz \
+  && sudo ./CHITUBOX_Basic_Linux_Installer_V2.0.run --target /chitubox --mode unattended \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get autoclean \
   && groupadd chitubox \
